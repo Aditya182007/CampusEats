@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101522">
+  <title>CampusEats & Hangouts</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">🍔</span>
+      <span>Campus<span class="accent">Eats</span></span>
+    </a>
+    <span class="nav-label">STUDENT FOOD & HANGOUT GUIDE</span>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">YOUR CAMPUS, YOUR SCENE</span>
+      <h1>Find your next<br><span class="accent">favourite spot.</span></h1>
+      <p class="hero-text">
+        Discover cafes, restaurants and hangout places around
+        Kristu Jayanti University.
+      </p>
+
+      <div class="search-box">
+        <span>⌕</span>
+        <input id="searchInput" type="search"
+          placeholder="Search places, categories or locations..."
+          aria-label="Search places">
+        <button id="clearSearch" type="button">Clear</button>
+      </div>
+
+      <div class="hero-tags">
+        <span>☕ Cafes</span>
+        <span>🍕 Restaurants</span>
+        <span>🎉 Hangouts</span>
+      </div>
+    </div>
+    <div class="hero-decoration" aria-hidden="true">✦</div>
+  </header>
+
+  <main class="container">
+    <section class="places-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">EXPLORE YOUR NEIGHBOURHOOD</span>
+          <h2>Places you'll love</h2>
+          <p>Discover somewhere new, just around campus.</p>
+        </div>
+        <span id="placeCount" class="place-count">Loading places...</span>
+      </div>
+
+      <div class="filters" id="categoryFilters">
+        <button class="filter active" data-category="All">All places</button>
+        <button class="filter" data-category="Restaurant">Restaurants</button>
+        <button class="filter" data-category="Cafe">Cafes</button>
+        <button class="filter" data-category="Fast Food">Fast food</button>
+        <button class="filter" data-category="Hangout">Hangouts</button>
+      </div>
+
+      <div id="placesGrid" class="places-grid" aria-live="polite">
+        <div class="status-message">Discovering places...</div>
+      </div>
+    </section>
+
+    <section class="tip-banner">
+      <span class="tip-icon">📍</span>
+      <div>
+        <h3>Your next campus adventure starts here.</h3>
+        <p>Hover over a place card to reveal its location and find directions.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#">🍔 Campus<span class="accent">Eats</span></a>
+    <p>Made for campus life · Always explore responsibly</p>
+  </footer>
+</body>
+</html>
